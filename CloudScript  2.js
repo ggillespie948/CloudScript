@@ -143,7 +143,7 @@ function GrantItems(items, count)
 }
 
 
-function DailyChallengeComplete()
+handlers.DailyChallengeComplete = function DailyChallengeComplete()
 {
 	var UpdateUserReadOnlyDataRequest = {
         	"PlayFabId": currentPlayerId,
