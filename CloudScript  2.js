@@ -144,7 +144,7 @@ function GrantItems(items, count)
 
 // Update player read only data
 // Execute via cloud script
-handlers.UpdateUserData = function(args)
+function DailyChallengeComplete
 {
  
    var dataPayload = {};
@@ -155,7 +155,7 @@ handlers.UpdateUserData = function(args)
  
    PlayFabId: currentPlayerId,
  
-   Data: dataPayLoad
+   Data: ["DailyChallengeComplete", "1"]
  
    });
 }
