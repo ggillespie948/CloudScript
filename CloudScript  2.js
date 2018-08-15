@@ -141,3 +141,21 @@ function GrantItems(items, count)
     var GrantItemsToUserResult = server.GrantItemsToUser(GrantItemsToUserRequest);
     return JSON.stringify(GrantItemsToUserResult.ItemGrantResults);
 }
+
+// Update player read only data
+// Execute via cloud script
+handlers.UpdateUserData = function(args)
+ 
+{
+ 
+   var dataPayload = {};
+ 
+   dataPayLoad[args.keyName] = args.valueString;
+ 
+   var result = server.UpdateUserReadOnlyData({
+ 
+   PlayFabId: currentPlayerId,
+ 
+   Data: dataPayLoad
+ 
+   });
