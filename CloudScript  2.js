@@ -142,9 +142,8 @@ function GrantItems(items, count)
     return JSON.stringify(GrantItemsToUserResult.ItemGrantResults);
 }
 
-// Update player read only data
-// Execute via cloud script
-function DailyChallengeComplete
+
+function DailyChallengeComplete()
 {
 	var UpdateUserReadOnlyDataRequest = {
         	"PlayFabId": currentPlayerId,
