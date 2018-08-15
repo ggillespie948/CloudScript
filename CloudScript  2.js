@@ -146,17 +146,14 @@ function GrantItems(items, count)
 // Execute via cloud script
 function DailyChallengeComplete
 {
+	var UpdateUserReadOnlyDataRequest = {
+        	"PlayFabId": currentPlayerId,
+        	"Data": {}
+    };
+    UpdateUserReadOnlyDataRequest.Data["DailyChallengeComplete"] = "1";
+
+    server.UpdateUserReadOnlyData(UpdateUserReadOnlyDataRequest);
  
-   var dataPayload = {};
- 
-   dataPayLoad[args.keyName] = args.valueString;
- 
-   var result = server.UpdateUserReadOnlyData({
- 
-   PlayFabId: currentPlayerId,
- 
-   Data: ["DailyChallengeComplete", "1"]
- 
-   });
+   
 }
 
