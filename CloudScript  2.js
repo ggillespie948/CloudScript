@@ -121,7 +121,7 @@ function ProcessReferrer(id, referrals)
     var AddUserVirtualCurrencyRequest = {
         "PlayFabId" : id,
         "VirtualCurrency": VIRTUAL_CURRENCY_CODE,
-        "Amount": 1000
+        "Amount": 1500
     };
     var AddUserVirtualCurrencyResult = server.AddUserVirtualCurrency(AddUserVirtualCurrencyRequest);
 
@@ -133,7 +133,7 @@ function GrantReferralBonus(code)
 {
     var GrantItemsToUserRequest = {
         "PlayFabId" : currentPlayerId,
-        "ItemIds" : [ REFERRAL_BADGE, REFERRAL_BONUS_BUNDLE ],
+        "ItemIds" : [ REFERRAL_BADGE],
         "Annotation" : "Referred by: " + code
     };
 
